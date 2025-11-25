@@ -23,13 +23,10 @@ export default class Renderer {
 
   configureRenderer() {
     // Activity 4.2: Realistic Rendering Settings
-    this.instance.physicallyCorrectLights = true;
-    this.instance.outputEncoding = THREE.sRGBEncoding;
     this.instance.toneMapping = THREE.ReinhardToneMapping;
     this.instance.toneMappingExposure = 1.5;
     this.instance.shadowMap.enabled = true;
-    this.instance.shadowMap.type = THREE.PCFSoftShadowShadowMap;
-    this.instance.shadowMap.needsUpdate = true;
+    this.instance.shadowMap.type = THREE.PCFShadowMap;
   }
 
   onWindowResize() {
