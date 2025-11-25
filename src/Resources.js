@@ -46,7 +46,6 @@ export default class Resources extends EventEmitter {
     ];
 
     const cubeTexture = new THREE.CubeTexture(textures);
-    cubeTexture.encoding = THREE.sRGBEncoding;
     this.items.environmentMapTexture = cubeTexture;
   }
 
